@@ -5,7 +5,13 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATMProject", "HæveautomatenTest\ATMProject.csproj", "{95F77AFE-BBD3-49DE-B446-C2F5E81CBFFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLibrary.Tests", "TestLibrary\TestLibrary.Tests.csproj", "{E69B05BE-9A91-4ABA-8934-81AC5BC689A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestLibrary.Tests", "TestLibrary\TestLibrary.Tests.csproj", "{E69B05BE-9A91-4ABA-8934-81AC5BC689A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Diagram", "Diagram", "{7A05CDF9-F0DE-4855-841F-A3A631CA3E2C}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Documents\Klassediagram ATM.drawio = ..\..\..\Documents\Klassediagram ATM.drawio
+		..\..\..\Documents\klassediagram ATM.pdf = ..\..\..\Documents\klassediagram ATM.pdf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
