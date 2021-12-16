@@ -13,6 +13,13 @@ namespace ATMProject
 
         }
 
+        /// <summary>
+        /// withdraw money from account
+        /// </summary>
+        /// <param name="insertedCard">The inserted card || UserInput card</param>
+        /// <param name="pincode">Userinput pincode</param>
+        /// <param name="amount">The amount that should be withdrawed</param>
+        /// <returns></returns>
         public bool Withdraw(Card insertedCard, int pincode, double amount)
         {
 

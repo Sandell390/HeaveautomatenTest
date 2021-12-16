@@ -10,7 +10,7 @@ namespace ATMProject
     {
         public Account Account { get; set; }
 
-        public string CardNumber { get; set; }
+        public string CardNumber { get;}
 
         public int PinCode { get; }
 
@@ -21,6 +21,12 @@ namespace ATMProject
             CardNumber = GenCardNumber(16, new string[] { "124","153","4553"});
         }
 
+        /// <summary>
+        /// Generates a new random card number to the card
+        /// </summary>
+        /// <param name="maxCardNumber">How long the card number should be</param>
+        /// <param name="prefix">The prefix</param>
+        /// <returns>Generated cardnumbers</returns>
         private string GenCardNumber(int maxCardNumber, string[] prefix)
         {
             string cardNumbers = string.Empty;
@@ -58,6 +64,10 @@ namespace ATMProject
             return cardNumbers;
         }
 
+        /// <summary>
+        /// Gets the money from the attacted account
+        /// </summary>
+        /// <returns>the balance</returns>
         public double GetMoney()
         {
             return Account.Balance;

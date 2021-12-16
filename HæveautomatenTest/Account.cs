@@ -8,7 +8,7 @@ namespace ATMProject
 {
     public class Account
     {
-        public string AccountNumber { get; set; }
+        public string AccountNumber { get;}
 
         public List<Card> Cards { get; set; }
 
@@ -20,6 +20,11 @@ namespace ATMProject
             AccountNumber = GenAccountNumber();
         }
 
+        /// <summary>
+        /// adds a new card to the list
+        /// </summary>
+        /// <param name="pinCode"></param>
+        /// <returns></returns>
         public Card AddNewCard(int pinCode)
         {
             Card card = new Card(pinCode, this);
@@ -27,6 +32,10 @@ namespace ATMProject
             return card;
         }
 
+        /// <summary>
+        /// Generates new Account number
+        /// </summary>
+        /// <returns></returns>
         private string GenAccountNumber()
         {
             //Starts the accountnumber with 3520

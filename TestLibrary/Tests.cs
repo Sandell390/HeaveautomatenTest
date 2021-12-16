@@ -15,6 +15,13 @@ namespace TestLibrary.Tests
 
         ATM atm = new ATM();
 
+        /// <summary>
+        /// Test if it is possible to withdraw money
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <param name="card"></param>
+        /// <param name="pincode"></param>
+        /// <param name="expected"></param>
         [Theory]
         [MemberData(nameof(WithdrawData))]
         public void Withdraw_ShouldWithdraw(double amount, Card card, int pincode, bool expected)
@@ -26,6 +33,12 @@ namespace TestLibrary.Tests
             Assert.Equal(expected, actual);
         }
 
+        /// <summary>
+        /// Test if we can vaildate the pincode
+        /// </summary>
+        /// <param name="userput"></param>
+        /// <param name="card"></param>
+        /// <param name="expected"></param>
         [Theory]
         [MemberData(nameof(CardPinData))]
         public void Withdraw_ShouldVaildatePin(int userput, Card card, bool expected)
@@ -38,6 +51,12 @@ namespace TestLibrary.Tests
             Assert.Equal(expected, actual);
         }
 
+        /// <summary>
+        /// Test if we can vaildate the amount
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <param name="card"></param>
+        /// <param name="expected"></param>
         [Theory]
         [MemberData(nameof(AccountAmountData))]
         public void Withdraw_ShouldVaildateAmount(double amount, Card card, bool expected)
